@@ -1,0 +1,33 @@
+@import "./../../_variables";
+
+.tab-btn {
+  border: $app-dark-grey 0.1px solid;
+  padding: 12px 0px;
+
+  h3 {
+    display: inline;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: $app-light-grey;
+    margin: 0px 25px;
+    text-transform: uppercase;
+  }
+}
+.tab-btn:hover {
+  border: $app-dark-grey 0.1px solid;
+  background-color: $app-dark-grey;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .tab-btn {
+    border: none;
+    padding: 16px 0px;
+  }
+  .tab-btn:hover {
+    border: none;
+    background-color: unset;
+  }
+}

@@ -1,13 +1,103 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Antonio Medium", "Spartan Regular", -apple-system, "Courier New", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  box-sizing: border-box;
+  background-color: #070724;
+  background-image: url("./assets/background-stars.svg");
+  background-size: cover;
+  background-position: top left;
+  color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Antonio Medium";
+  src: url("./fonts/Antonio/static/Antonio-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Spartan Bold";
+  src: url("./fonts/League_Spartan/static/LeagueSpartan-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Spartan Regular";
+  src: url("./fonts/League_Spartan/static/LeagueSpartan-Regular.ttf") format("truetype");
+}
+h1 {
+  font-family: "Antonio Medium";
+  font-size: 80px;
+  line-height: 103px;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "Antonio Medium";
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Spartan Bold";
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.6px;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Spartan Bold";
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+p,
+span {
+  font-family: "Spartan Regular";
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  h1 {
+    font-size: 48px;
+    line-height: normal;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: -0.9px;
+  }
+  h4 {
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.73px;
+  }
+  span {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 0px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: -0.75px;
+  }
+  h3 {
+    font-size: 13px;
+    letter-spacing: 1.93px;
+    line-height: normal;
+  }
+}/*# sourceMappingURL=index.css.map */

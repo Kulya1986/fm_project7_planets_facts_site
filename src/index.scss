@@ -1,0 +1,117 @@
+@import "./_variables";
+
+body {
+  margin: 0;
+  font-family: "Antonio Medium", "Spartan Regular", -apple-system, "Courier New",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  box-sizing: border-box;
+  background-color: $app-dark-blue;
+  background-image: url("./assets/background-stars.svg");
+  background-size: cover;
+  background-position: top left;
+  color: $app-white;
+}
+
+@font-face {
+  font-family: "Antonio Medium";
+  src: url("./fonts/Antonio/static/Antonio-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spartan Bold";
+  src: url("./fonts/League_Spartan/static/LeagueSpartan-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Spartan Regular";
+  src: url("./fonts/League_Spartan/static/LeagueSpartan-Regular.ttf")
+    format("truetype");
+}
+
+h1 {
+  font-family: "Antonio Medium";
+  font-size: $app-h1-heading;
+  line-height: $app-h1-line;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "Antonio Medium";
+  font-size: $app-h2-heading;
+  line-height: $app-h2-line;
+  letter-spacing: $app-h2-spacing;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Spartan Bold";
+  font-size: $app-h3-heading;
+  line-height: $app-line;
+  letter-spacing: $app-h3-spacing;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Spartan Bold";
+  font-size: $app-h4-heading;
+  line-height: $app-line;
+  letter-spacing: $app-h4-spacing;
+}
+
+p,
+span {
+  font-family: "Spartan Regular";
+  font-size: $app-text;
+  line-height: $app-line;
+  font-weight: normal;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  h1 {
+    font-size: $app-tab-h1-heading;
+    line-height: $app-tab-h1-line;
+  }
+
+  h2 {
+    font-size: $app-tab-h2-heading;
+    line-height: $app-tab-h2-line;
+    letter-spacing: $app-tab-h2-spacing;
+  }
+
+  h4 {
+    font-size: $app-tab-h4-heading;
+    line-height: $app-tab-h4-line;
+    letter-spacing: $app-tab-h4-spacing;
+  }
+
+  span {
+    font-size: 12px;
+    line-height: $app-line;
+    letter-spacing: $app-tab-spacing;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: $app-mob-h1-heading;
+    line-height: $app-mob-h1-line;
+  }
+
+  h2 {
+    font-size: $app-mob-h2-heading;
+    line-height: $app-mob-h2-line;
+    letter-spacing: $app-mob-h2-spacing;
+  }
+
+  h3 {
+    font-size: $app-tab-h3-heading;
+    letter-spacing: $app-tab-h3-spacing;
+    line-height: $app-mob-h2-line;
+  }
+}

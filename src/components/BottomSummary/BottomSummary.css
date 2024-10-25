@@ -1,0 +1,78 @@
+.bottom-summary {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin-bottom: 3.5rem;
+}
+.bottom-summary div {
+  height: 8rem;
+  border: #38384f 0.1px solid;
+  padding-left: 23px;
+  padding-top: 20px;
+}
+.bottom-summary div .block-data {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: normal;
+}
+.bottom-summary div .block-title {
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+  color: #838391;
+}
+.bottom-summary #rotation {
+  grid-column: 1/span 3;
+}
+.bottom-summary #revolution {
+  grid-column: 4/span 3;
+}
+.bottom-summary #radius {
+  grid-column: 7/span 3;
+}
+.bottom-summary #temperature {
+  grid-column: 10/span 3;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .bottom-summary {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .bottom-summary div {
+    height: 5.5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  .bottom-summary div .block-title {
+    margin: 0 0 6px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bottom-summary {
+    row-gap: 8px;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .bottom-summary div {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem 0.5rem;
+  }
+  .bottom-summary div .block-title {
+    margin: 0;
+  }
+  .bottom-summary #rotation,
+  .bottom-summary #revolution,
+  .bottom-summary #radius,
+  .bottom-summary #temperature {
+    grid-column: 1/span end;
+  }
+}/*# sourceMappingURL=BottomSummary.css.map */

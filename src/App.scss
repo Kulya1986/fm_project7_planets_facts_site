@@ -4,12 +4,17 @@ main {
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  #container main {
-    padding: 0px 40px;
+  #container {
+    main {
+      padding: 0px 40px;
+    }
   }
 }
+
 @media only screen and (max-width: 480px) {
-  #container main {
-    padding: 0;
+  #container {
+    main {
+      padding: 0;
+    }
   }
-}/*# sourceMappingURL=App.css.map */
+}

@@ -1,0 +1,201 @@
+@import "./../../_variables";
+nav {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: sticky;
+  padding: 0rem 2rem;
+  border-bottom: 0.1px $app-light-grey solid;
+
+  #logo {
+    font-family: "Antonio Medium";
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: -1.05px;
+    line-height: auto;
+  }
+
+  .tabs-list {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 0 auto;
+    line-height: $app-line;
+
+    div {
+      text-transform: uppercase;
+      font-size: $app-h4-heading;
+      letter-spacing: $app-h4-spacing;
+      font-family: "Spartan Bold";
+      border-top: $app-dark-blue solid 4px;
+      padding: 1.5rem 0rem;
+    }
+    #tab-mercury:hover {
+      border-top: $app-mercury solid 4px;
+    }
+    #tab-venus:hover {
+      border-top: $app-venus solid 4px;
+    }
+    #tab-earth:hover {
+      border-top: $app-earth solid 4px;
+    }
+    #tab-mars:hover {
+      border-top: $app-mars solid 4px;
+    }
+    #tab-jupiter:hover {
+      border-top: $app-jupiter solid 4px;
+    }
+    #tab-saturn:hover {
+      border-top: $app-saturn solid 4px;
+    }
+    #tab-neptune:hover {
+      border-top: $app-neptune solid 4px;
+    }
+    #tab-uranus:hover {
+      border-top: $app-uranus solid 4px;
+    }
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  nav {
+    flex-direction: column;
+    padding: 2rem 3.25rem 1.75rem;
+
+    .tabs-list {
+      margin: 2.5rem 0rem 0rem;
+      width: 100%;
+
+      div {
+        padding: 0;
+        border-top: none;
+      }
+      #tab-mercury:hover,
+      #tab-uranus:hover,
+      #tab-neptune:hover,
+      #tab-saturn:hover,
+      #tab-jupiter:hover,
+      #tab-mars:hover,
+      #tab-earth:hover,
+      #tab-venus:hover {
+        border-top: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+
+    padding: 0;
+    box-sizing: border-box;
+
+    position: relative;
+    #logo {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+
+      img {
+        display: block;
+      }
+    }
+
+    .tabs-list {
+      display: none;
+      margin: 0;
+      animation: hideMenu 0.3s ease forwards;
+    }
+
+    .mobile-opened {
+      height: fit-content;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      background-color: $app-dark-blue;
+      flex-wrap: nowrap;
+      position: absolute;
+      top: 69px;
+      z-index: 2;
+      width: 100%;
+      animation: openMenu 0.3s ease;
+      padding: 44px 24px 67px;
+
+      .tab {
+        height: 65px;
+        border-bottom: $app-light-grey 0.1px solid;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 0.5rem;
+        font-family: "Spartan Bold";
+        letter-spacing: 1.36px;
+
+        .circle {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin-right: 1.5rem;
+        }
+        div:last-child {
+          margin-left: auto;
+        }
+      }
+      .tab:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @keyframes openMenu {
+    0% {
+      opacity: 0;
+      height: 0px;
+    }
+    25% {
+      opacity: 1;
+      height: 150px;
+    }
+    75% {
+      opacity: 1;
+      height: 450px;
+    }
+    100% {
+      opacity: 1;
+      height: 598px;
+    }
+  }
+  @keyframes hideMenu {
+    0% {
+      opacity: 1;
+      height: 598px;
+    }
+    25% {
+      opacity: 1;
+      height: 450px;
+    }
+    75% {
+      opacity: 1;
+      height: 150px;
+    }
+    100% {
+      opacity: 0;
+      height: 0px;
+    }
+  }
+}
