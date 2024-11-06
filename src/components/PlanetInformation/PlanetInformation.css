@@ -107,7 +107,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     border-bottom: 0.1px #838391 solid;
-    margin: 0rem 1.5rem;
+    padding: 0rem 1.5rem;
   }
   .planet #planet-info .info-content {
     grid-column: 1/span end;

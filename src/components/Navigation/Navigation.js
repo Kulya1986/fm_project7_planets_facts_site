@@ -21,7 +21,7 @@ export default function Navigation({ data, onTabClick }) {
             height="17"
             onClick={handleMenuIsOpened}
           >
-            <g fill={menuColor} fill-rule="evenodd">
+            <g fill={menuColor} fillRule="evenodd">
               <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
             </g>
           </svg>
